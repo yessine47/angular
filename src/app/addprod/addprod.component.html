@@ -1,0 +1,21 @@
+<nav class="navbar navbar-inverse" style="background-color: lightblue;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+      <a href="http://localhost:4200/ListProd">Home</a>
+      <a></a>
+      <a></a>
+      <a></a>
+      <a href=" ">logout</a>
+  </div>
+</nav>
+<form [formGroup]="form" style="background-color: lightcyan;">
+  <div><h5 style="color: teal;">id :</h5><input  formControlName="id" class="form-control w-25" ></div>
+  <div><h5 style="color: teal;">title :</h5><input  formControlName="title" class="form-control w-25" ></div>
+  <div><h5 style="color: teal;">price :</h5><input  formControlName="price" class="form-control w-25" ></div>
+  <div><h5 style="color: teal;">Quantity :</h5><input  formControlName="quantity" class="form-control w-25" ></div>
+  <div><h5 style="color: teal;">image :</h5><input  formControlName="image" class="form-control w-25" ></div>
+  <br /><br />
+  <button class="btn btn-outline-primary" [disabled]="form.invalid"  (click)="pc.ajouter(form.value)" style=" position: absolute; left: 5%;  padding: 10px 50px ;">ajouter</button>
+  <br /><br />
+</form>

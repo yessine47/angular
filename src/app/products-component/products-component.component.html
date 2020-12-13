@@ -1,0 +1,27 @@
+<nav class="navbar navbar-inverse" style="background-color: lightblue;">
+    <div class="container-fluid">
+      <div class="navbar-header">
+      </div>
+        <a href="http://localhost:4200/ListProd">Home</a>
+        <a><button class="btn btn-outline-primary"  (click)="pc.goToAjouter()">ajouter produit</button></a>
+        <a><input type="text" class="form-control"   placeholder="Search" name="search" #s></a>
+        <a><button type="submit" (click)="ngOnInit()" class="btn btn-outline-primary">search</button></a>
+        <a href=" ">logout</a>
+    </div>
+</nav>
+  <!-- ****************************************************************************** -->
+<div class="container-fluid content-row">
+<div class="row">
+<p  *ngFor="let item of pc.listproduct | searchfilter:s.value " >
+<app-shild-products  [a]="item" (message)="getmessage($event)"></app-shild-products>
+</p>
+</div>
+</div>  
+ <h3 style="color: red;">{{mes.length!=0?'Promotions':''}}</h3>
+ <div *ngFor="let p of mes ">
+<div>
+ <p> {{p}} </p>
+</div>
+ </div> 
+ <script src="https://apps.elfsight.com/p/platform.js" defer></script>
+ <div class="elfsight-app-08bef726-6917-4cc3-8bdb-c4cfa2c36884"></div>

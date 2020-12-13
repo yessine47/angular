@@ -1,0 +1,21 @@
+<nav class="navbar navbar-inverse" style="background-color: lightblue;">
+  <div class="container-fluid">
+    <div class="navbar-header">
+    </div>
+      <a href="http://localhost:4200/ListProd">Home</a>
+      <a></a>
+      <a></a>
+      <a></a>
+      <a href=" ">logout</a>
+  </div>
+</nav>
+<form [formGroup]="form" style="background-color: lightcyan;">
+  <div><h5 style="color: teal;">id :</h5><input  formControlName="id" class="form-control w-25" [(ngModel)]="idd" value="idd"></div>
+  <div><h5 style="color: teal;">title :</h5><input  formControlName="title" class="form-control w-25" [(ngModel)]="title" value="title"></div>
+  <div><h5 style="color: teal;">price :</h5><input  formControlName="price" class="form-control w-25" [(ngModel)]="price" value="price"  ></div>
+  <div><h5 style="color: teal;">Quantity :</h5><input  formControlName="quantity" class="form-control w-25" [(ngModel)]="quantity" value="quantity"></div>
+  <div><h5 style="color: teal;">image :</h5><input  formControlName="image" class="form-control w-25" [(ngModel)]="image" value="image" ></div>
+  <br /><br />
+  <button class="btn btn-outline-primary" (click)="pc.modifier(form.value.id,form.value)" style=" position: absolute; left: 5%;  padding: 10px 50px ;">modifier</button>
+  <br /><br />
+</form>
